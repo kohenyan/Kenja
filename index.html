@@ -34,12 +34,13 @@
             padding: 0px 0px 0px 0px;
             text-shadow: 2px 2px rgb(255, 0, 0), 2px -2px rgb(0, 255, 0), -2px 0px rgb(0, 0, 255);
         }
-
         html,
         body {
             height: 100%;
             margin: 0px 0px 0px 0px;
             padding: 0px 0px 0px 0px;
+            vertical-align: bottom;
+            background-color: black;
         }
 
         .links,
@@ -130,10 +131,12 @@
             margin: 0px 0px 0px 0px;
             padding: 0px 0px 0px 0px;
             display: inline-block;
+            font-size: 0;
         }
 
         figcaption {
             text-align: center;
+            font-size: 36px;
         }
 
         #hikaru {
@@ -142,7 +145,6 @@
 
         div {
             position:sticky;
-            display: block;
         }
 
         #about {
@@ -162,6 +164,28 @@
             -moz-user-select: none;
             -webkit-user-select: none;
         }
+
+        .andromeda {
+            position: relative;
+            background-color: rgba(0, 0, 0, 0.9);
+            background-blend-mode: lighten;
+            background-image: url("andromeda.jpg");
+            background-position: center center;
+            background-repeat: repeat-y;
+            background-attachment: fixed;
+            background-size: cover;
+
+            width: 100%;
+            height: 100%;
+            margin: 0px 0px 0px 0px;
+            padding: 0px 0px 0px 0px;
+
+        }
+
+        .strategy {
+            color: white;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
     </style>
 </head>
 
@@ -171,7 +195,7 @@
     </div>
     <div id="links">
         <a href="#about" class="links">> About us</a>
-        <a href="#strategy_world1" class="links">> Strategy of World 1</a>
+        <a href="#strategy" class="links">> Our strategy</a>
     </div>
     <content>
         <div id="about" class="about vscode_image">
@@ -188,13 +212,12 @@
             </figure>
             <h3>2. Members' profile</h3>
             <ul>
-                <li><p class="select">Hikaru Kajita - I am in 7th grade now. I really love math and programming.</p></li>
-                <li><p class="select">Kohei Yamashita - 私の名は「こへにゃん」というジバニャンの流行に乗っかろうとして失敗した男である。</p></li>
+                <li><p class="select">Hikaru Kajita - I am in 7th grade now. I really love math and programming. I have been programming for over 4 years.</p></li>
+                <li><p class="select">Kohei Yamashita - I am also in 7th grade. I am studying C++ and doing competitive programming (AtCoder). I went to the robot classroom since I was in fifth grade.</p></li>
             </ul>
             <h3 class="select">3. We are joining RCAP CoSpace Rescue 2021 U12.</h3>
-        </div>
-        <div id="strategy_world1" class="strategy_world1">
-            <h2>Strategy of world 1<span class="blink">_</span></h2>
+        </div><div id="strategy" class="strategy andromeda">
+            <h2>Our strategy<span class="blink">_</span></h2>
         </div>
     </content>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -219,7 +242,7 @@
         }, 800);
 
         Array.from($('.img_member')).forEach(e => {
-            e.style.width = `${width / 2 - 10}px`;
+            e.style.width = `${width / 2 - 9}px`;
             e.style.height = 'auto';
         });
 
